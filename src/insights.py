@@ -39,15 +39,12 @@ def filter_by_industry(jobs, industry):
 
 
 def get_max_salary(path):
-    jobs = read(path)
-    salary = []
-    for salary in jobs:
-        if (
-            salary["max_salary"].isdigit()
-            and salary["max_salary"].isdigit() != " "
-        ):
-            salary.append(int(salary["max_salary"]))
-    max_salary = max(salary)
+    jobs_all = read(path)
+    salaries = []
+    for job in jobs_all:
+        if job["max_salary"].isdigit():
+            salaries.append(int(job["max_salary"]))
+    max_salary = max(salaries)
     return max_salary
 
 
