@@ -3,7 +3,7 @@ import pytest
 
 
 @pytest.fixture
-def jobs_sort_by_criteria():
+def jobs():
 
     return [
         {
